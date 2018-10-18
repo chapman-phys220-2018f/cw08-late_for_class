@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
-def sinesum(t, n):
+import numpy as np
 
-    def sinf(x):
-        T = 2 * np.pi
-        ones = np.ones_like(x)
-        return((4/np.pi) * ((np.multiply((np.divide(1, 2*k-1)), np.sin(np.divide(2*(2*k-1)*pi*t, T)))) out = ones, where=x!=0))
+def sinesum(t=.01*2*np.pi, n=1, T = 2*np.pi):
 
-    s = sinf(x)
-    return (x, s)
+    kmin = 1
+    kmax = n
+    dk = 1
+
+    k = np.arange(kmin, kmax + dk, dk)
+    gk = ((4/np.pi) * (((1 / 2*k-1) * np.sin(2*(2*k-1)*np.pi*t / T))))
+    sum_gk = np.trapz(gk, k, dk)
+    return sum_gk
