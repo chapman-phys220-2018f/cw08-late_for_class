@@ -5,7 +5,9 @@
 Verify implementation of the Fourier sine series using numpy arrays.
 """
 
+import math
 import sinesum
+import numpy as np
 
 def test_dummy():
     """Dummy test that always fails. Please replace with actual tests."""
