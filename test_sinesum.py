@@ -9,6 +9,10 @@ import math
 import sinesum
 import numpy as np
 
-def test_dummy():
-    """Dummy test that always fails. Please replace with actual tests."""
-    assert False, "This is a dummy test"
+def test_s():
+    """Test to ensure that the s function in sinesum is correct"""
+    assert 0.67< sinesum.s(0.01*2*np.pi, 10)< 0.671
+    
+def test_f():
+    """Test to ensure that the f function in sinesum is correct"""
+    assert sinesum.f(0.01*2*np.pi)==1
